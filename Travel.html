@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TravelGo — Explore the World</title>
+  <link rel="stylesheet" href="Proto.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">TravelGo</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Destinations</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero" role="banner" aria-label="Hero">
+    <div class="hero-content">
+      <h1>Find Your Next Adventure</h1>
+      <p>
+        Explore dreamy destinations like Paris, Maldives, and Switzerland with exclusive packages and seamless bookings.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features / Top Destinations -->
+  <section id="features" class="features" aria-labelledby="features-title">
+    <h2 id="features-title">Top Destinations</h2>
+    <div class="feature-container">
+      <article class="feature-box">
+        <img src="Travels/Travel_Paris.jpg" alt="Eiffel Tower in Paris"/>
+        <h3>Paris, France</h3>
+        <p>The city of lights, love, and art. Stroll by the Eiffel Tower and savor French cuisine.</p>
+      </article>
+
+      <article class="feature-box">
+        <img src="Travels/Travel_Maldives.jpg" alt="Tropical beach in Maldives"/>
+        <h3>Maldives</h3>
+        <p>Crystal-clear waters, luxury resorts, and stunning coral reefs for an unforgettable vacation.</p>
+      </article>
+
+      <article class="feature-box">
+        <img src="Travels/Travel_Swizerland.jpg" alt="Snow-capped mountains in Switzerland"/>
+        <h3>Switzerland</h3>
+        <p>Breathtaking Alps, serene lakes, and cozy villages—perfect for nature and adventure lovers.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Packages -->
+  <section id="packages" class="packages" aria-labelledby="packages-title">
+    <h2 id="packages-title">Popular Packages</h2>
+    <div class="package-container">
+      <article class="package-box">
+        <h3>Basic</h3>
+        <p>2 Nights / 3 Days</p>
+        <p>Hotel + Breakfast</p>
+        <p><strong>₹19,999</strong></p>
+      </article>
+
+      <article class="package-box">
+        <h3>Standard</h3>
+        <p>4 Nights / 5 Days</p>
+        <p>Hotel + Transfers + Sightseeing</p>
+        <p><strong>₹39,999</strong></p>
+      </article>
+
+      <article class="package-box">
+        <h3>Premium</h3>
+        <p>6 Nights / 7 Days</p>
+        <p>All-inclusive + Private Guide</p>
+        <p><strong>₹69,999</strong></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section id="booking" class="booking" aria-labelledby="booking-title">
+    <h2 id="booking-title">Book Your Trip</h2>
+    <form class="booking-form" action="#" method="post">
+      <input type="text" name="fullName" placeholder="Full Name" required aria-label="Full Name"/>
+      <input type="email" name="email" placeholder="Email" required aria-label="Email"/>
+      <input type="tel" name="phone" placeholder="Phone" required aria-label="Phone"/>
+
+      <select name="destination" required aria-label="Destination">
+        <option value="" disabled selected>Select Destination</option>
+        <option value="paris">Paris, France</option>
+        <option value="maldives">Maldives</option>
+        <option value="switzerland">Switzerland</option>
+      </select>
+
+      <select name="package" required aria-label="Package">
+        <option value="" disabled selected>Select Package</option>
+        <option value="basic">Basic (2N/3D)</option>
+        <option value="standard">Standard (4N/5D)</option>
+        <option value="premium">Premium (6N/7D)</option>
+      </select>
+
+      <input type="date" name="travelDate" required aria-label="Travel Date"/>
+      <textarea name="message" rows="4" placeholder="Additional requests or notes" aria-label="Message"></textarea>
+      <button type="submit">Submit Booking</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" role="contentinfo">
+    <p>&copy; <span id="year"></span> TravelGo. All rights reserved.</p>
+    <div class="social-links" aria-label="Social links">
+      <a href="#" aria-label="Facebook">Facebook</a>
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="Twitter">Twitter</a>
+    </div>
+  </footer>
+
+  <script>
+    // Auto update year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
